@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Styled Clock</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0f0f0f;
+            font-family: "Courier New", Courier, monospace;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .python {
+            /*please delet the border*/
+            /*border: 2px solid blue;*/
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            font-size: smaller;
+            white-space: nowrap;
+            color: rgb(221, 238, 255);
+        }
+        h1{
+            width: 90%;
+            word-spacing: 1%;
+        }
+        .spanBlue{
+            color:rgb(90, 134, 187);
+        }
+        .spanGreen{
+            color:rgb(90, 187, 121);
+        }
+        .spanOrange{
+            color:rgb(187, 135, 90);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="python">
+            <!-- Your content goes here -->
+            <h1 id="line1"><span class="spanBlue">from</span> datetime <span class="spanBlue">import</span> datetime</h1>
+            <h1 id="line2">&nbsp;</h1>
+            <h1 id="line3"><span class="spanBlue">class</span> Clock:</h1>
+            <h1 id="line4">&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">def</span> __init__(<span class="spanGreen">self</span>):</h1>
+            <h1 id="line5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.hh = <span id="hh" class="spanOrange">hh</span></h1>
+            <h1 id="line6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.mm = <span id="mm" class="spanOrange">mm</span></h1>
+            <h1 id="line7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.ss = <span id="ss" class="spanOrange">ss</span></h1>
+            <h1 id="line8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.dd = <span id="dd" class="spanOrange">dd</span></h1>
+            <h1 id="line8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.month = <span id="month" class="spanOrange">mm</span></h1>
+            <h1 id="line8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.yyyy = <span id="yy" class="spanOrange">yy</span></h1>
+            <h1 id="line9">&nbsp;</h1>
+            <h1 id="line10">current_time = Clock()</h1>
+            <h1 id="line11"></h1>
+            <h1 id="line12"></h1>
+        </div>
+    </div>
+    <script>
+        function updateTime() {
+            var now = new Date();
+            var hh = now.getHours();
+            var mm = now.getMinutes();
+            var ss = now.getSeconds();
+            var dd = now.getDate();
+            var month = now.toLocaleDateString('en-US', { month: 'long' });
+            var yy = now.getFullYear();
+            hh = (hh < 10 ? '0' : '') + hh;
+            mm = (mm < 10 ? '0' : '') + mm;
+            ss = (ss < 10 ? '0' : '') + ss;
+            dd = (dd < 10 ? '0' : '') + dd;
+            document.getElementById("hh").textContent = hh;
+            document.getElementById("mm").textContent = mm;
+            document.getElementById("ss").textContent = ss;
+            document.getElementById("dd").textContent = dd;
+            document.getElementById("month").textContent = month;
+            document.getElementById("yy").textContent = yy;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
