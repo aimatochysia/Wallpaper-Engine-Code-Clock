@@ -7,36 +7,51 @@
     <style>
         body, html {
             height: 100%;
+            width: 100%;
+            padding: 0;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hiDDen;
             background-color: #0f0f0f;
             font-family: "Courier New", Courier, monospace;
-        }
-        
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            width: 100%;
-        }
-        
-        .python {
-            /*please delet the border*/
-            /*border: 2px solid blue;*/
-            justify-content: center;
-            align-items: center;
-            text-align: left;
-            font-size: smaller;
-            white-space: nowrap;
-            color: rgb(221, 238, 255);
         }
         h1{
             width: 90%;
             word-spacing: 1%;
         }
+
+        .container {
+            border: 2px solid blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100vw;
+            font-size: 1vw;
+            white-space: nowrap;
+            color: rgb(221, 238, 255);
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+        }
+
+        /*Code Language*/
+        .Python {
+            display: none;
+        }
+        .C {
+            display: none;
+        }
+        .CPP {
+            display: none;
+        }
+        .CS{
+            display: flexbox;
+        }
+
+        /*Element Color*/
         .spanBlue{
             color:rgb(90, 134, 187);
         }
@@ -49,47 +64,150 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="python">
-            <!-- Your content goes here -->
-            <h1 id="line1"><span class="spanBlue">from</span> datetime <span class="spanBlue">import</span> datetime</h1>
-            <h1 id="line2">&nbsp;</h1>
-            <h1 id="line3"><span class="spanBlue">class</span> Clock:</h1>
-            <h1 id="line4">&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">def</span> __init__(<span class="spanGreen">self</span>):</h1>
-            <h1 id="line5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.hh = <span id="hh" class="spanOrange">hh</span></h1>
-            <h1 id="line6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.mm = <span id="mm" class="spanOrange">mm</span></h1>
-            <h1 id="line7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.ss = <span id="ss" class="spanOrange">ss</span></h1>
-            <h1 id="line8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.dd = <span id="dd" class="spanOrange">dd</span></h1>
-            <h1 id="line8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.month = <span id="month" class="spanOrange">mm</span></h1>
-            <h1 id="line8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.yyyy = <span id="yy" class="spanOrange">yy</span></h1>
-            <h1 id="line9">&nbsp;</h1>
-            <h1 id="line10">current_time = Clock()</h1>
-            <h1 id="line11"></h1>
-            <h1 id="line12"></h1>
+    <div class="container" id="id-container">
+        <div class="Python">
+            <h1><span class="spanBlue">from</span> datetime <span class="spanBlue">import</span> datetime</h1>
+            <h1>&nbsp;</h1>
+            <h1><span class="spanBlue">class</span> DateTime:</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">def</span> __init__(<span class="spanGreen">self</span>):</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.hh = <span id="pyhh" class="spanOrange">00</span></h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.mm = <span id="pymm" class="spanOrange">00</span></h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.ss = <span id="pyss" class="spanOrange">00</span></h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.DD = <span id="pyDD" class="spanOrange">00</span></h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.MM = <span id="pyMM" class="spanOrange">00</span></h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanGreen">self</span>.YY = <span id="pyYY" class="spanOrange">00</span></h1>
+            <h1>&nbsp;</h1>
+            <h1>Now = DateTime()</h1>
+        </div>
+        <div class="C">
+            <h1><span class="spanBlue">#include</span> <span class="spanOrange">&lt;stdio.h&gt;</span></h1>
+            <h1><span class="spanBlue">struct</span> DateTime {</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">unsigned int</span> hh; <span class="spanBlue">unsigned int</span> mm;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">unsigned int</span> ss; <span class="spanBlue">unsigned int</span> DD;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">char</span> MM[<span class="spanBlue">10</span>]; <span class="spanBlue">unsigned int</span> YY;</h1>
+            <h1>}</h1>
+            <h1>&nbsp;</h1>
+            <h1><span class="spanBlue">int</span> main() {</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">struct</span> DateTime Now = {</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.hh = <span id="chh" class="spanBlue">00</span>, .mm = <span id="cmm" class="spanBlue">00</span>, .ss = <span id="css" class="spanBlue">00</span>,</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.DD = <span id="cDD" class="spanBlue">00</span>, .MM = <span class="spanGreen">"<span id="cMM">00</span>"</span>, .YY = <span id="cYY" class="spanBlue">00</span></h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;}</h1>
+            <h1>}</h1>
+            <h1><span class="spanBlue">return</span> 0;</h1>
+        </div>
+        <div class="CPP">
+            <h1><span class="spanBlue">#include</span> <span class="spanOrange">&lt;iostream&gt;</span></h1>
+            <h1><span class="spanBlue">#include</span> <span class="spanOrange">&lt;string&gt;</span></h1>
+            <h1><span class="spanBlue">class</span> DateTime {</h1>
+            <h1><span class="spanBlue">public</span>:</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">int</span> hh; <span class="spanBlue">int</span> mm; <span class="spanBlue">int</span> ss;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">int</span> DD; std::string MM; <span class="spanBlue">int</span> YY;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;DateTime(<span class="spanBlue">int</span> h, <span class="spanBlue">int</span> m, <span class="spanBlue">int</span> s,</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">int</span> D, <span class="spanBlue">const</span> std::string& M, <span class="spanBlue">int</span> Y)</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: hh(h), mm(m), ss(s), DD(D), MM(M)</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, YY(Y){};</h1>
+            <h1>}</h1>
+            <h1><span class="spanBlue">int</span> main() {</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;DateTime Now(<span id="cpphh" class="spanBlue">00</span>,<span id="cppmm" class="spanBlue">00</span>,<span id="cppss" class="spanBlue">00</span>,</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="cppDD" class="spanBlue">00</span>,<span class="spanGreen">"<span id="cppMM">00</span>"</span>,<span id="cppYY" class="spanBlue">00</span>);</h1>
+            <h1>}</h1>
+            <h1><span class="spanBlue">return</span> 0;</h1>
+        </div>
+        <div class="CS">
+            <h1><span class="spanBlue">using</span> <span class="spanGreen">System</span></h1>
+            <h1><span class="spanBlue">public</span> <span class="spanBlue">class</span> <span class="spanGreen">DateTime</span></h1>
+            <h1>{</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> <span class="spanBlue">int</span> hh {<span class="spanBlue">get</span>; <span class="spanBlue">set</span>;} = <span id="cshh">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> <span class="spanBlue">int</span> mm {<span class="spanBlue">get</span>; <span class="spanBlue">set</span>;} = <span id="csmm">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> <span class="spanBlue">int</span> ss {<span class="spanBlue">get</span>; <span class="spanBlue">set</span>;} = <span id="csss">00</span>;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> <span class="spanBlue">int</span> DD {<span class="spanBlue">get</span>; <span class="spanBlue">set</span>;} = <span id="csDD">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> <span class="spanBlue">string</span> MM {<span class="spanBlue">get</span>; <span class="spanBlue">set</span>;} = <span class="spanOrange">"<span id="csMM">00</span>"</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> <span class="spanBlue">int</span> YY {<span class="spanBlue">get</span>; <span class="spanBlue">set</span>;} = <span id="csYY">00</span>;</h1>
+            <h1>}</h1>
+            <h1>&nbsp;</h1>
+            <h1><span class="spanBlue">class</span> <span class="spanGreen">App</span></h1>
+            <h1>{</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">static void</span> <span class="spanGreen">Main</span>(<span class="spanBlue">string</span>[] args)</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;{</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DateTime Now = <span class="spanBlue">new</span> DateTime();</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;}</h1>
+            <h1>}</h1>
+        </div>
+        <div class="Java">
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
+            <h1></h1>
         </div>
     </div>
     <script>
-        function updateTime() {
+        function setFontSize() {
+            var element = document.getElementById('id-container');
+            var screenHeight = window.innerHeight;
+            var screenWidth = window.innerWidth;
+            var fontSize;
+        
+            if (screenHeight >= screenWidth) {
+                element.style.fontSize = "1.5vw";
+            } else {
+                element.style.fontSize = "1.5vh";
+            }
+        }
+        window.addEventListener('load', setFontSize);
+        window.addEventListener('resize', setFontSize);
+        function getMonthName(month) {
+            const months = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+            return months[month];
+        }
+        function updateTime(hhId, mmId, ssId, DDId, MMId, YYId) {
             var now = new Date();
             var hh = now.getHours();
             var mm = now.getMinutes();
             var ss = now.getSeconds();
-            var dd = now.getDate();
-            var month = now.toLocaleDateString('en-US', { month: 'long' });
-            var yy = now.getFullYear();
+            var DD = now.getDate();
+            var MM = getMonthName(now.getMonth());
+            var YY = now.getFullYear();
             hh = (hh < 10 ? '0' : '') + hh;
             mm = (mm < 10 ? '0' : '') + mm;
             ss = (ss < 10 ? '0' : '') + ss;
-            dd = (dd < 10 ? '0' : '') + dd;
-            document.getElementById("hh").textContent = hh;
-            document.getElementById("mm").textContent = mm;
-            document.getElementById("ss").textContent = ss;
-            document.getElementById("dd").textContent = dd;
-            document.getElementById("month").textContent = month;
-            document.getElementById("yy").textContent = yy;
+            DD = (DD < 10 ? '0' : '') + DD;
+            document.getElementById(hhId).textContent = hh;
+            document.getElementById(mmId).textContent = mm;
+            document.getElementById(ssId).textContent = ss;
+            document.getElementById(DDId).textContent = DD;
+            document.getElementById(MMId).textContent = MM;
+            document.getElementById(YYId).textContent = YY;
         }
-        setInterval(updateTime, 1000);
-        updateTime();
+        /*PYTHON*/
+        /* setInterval(function() {updateTime("pyhh", "pymm", "pyss", "pyDD", "pyMM", "pyYY");}, 1000);
+        updateTime("pyhh", "pymm", "pyss", "pyDD", "pyMM", "pyYY");
+
+        /*C*/
+        /* setInterval(function() {updateTime("chh", "cmm", "css", "cDD", "cMM", "cYy");}, 1000);
+        updateTime("chh", "cmm", "css", "cDD", "cMM", "cYY"); >
+
+        /*CPP*/
+        /* setInterval(function() {updateTime("cpphh", "cppmm", "cppss", "cppDD", "cppMM", "cppYy");}, 1000);
+        updateTime("cpphh", "cppmm", "cppss", "cppDD", "cppMM", "cppYY");
+
+        /*CS*/
+        setInterval(function() {updateTime("cshh", "csmm", "csss", "csDD", "csMM", "csYy");}, 1000);
+        updateTime("cshh", "csmm", "csss", "csDD", "csMM", "csYY");
     </script>
 </body>
 </html>
