@@ -51,7 +51,10 @@
             display: none;
         }
         .Java1,.Java2{
-            display: flexbox;
+            display: none;
+        }
+        .JS{
+            display: block;
         }
 
         /*Element Color*/
@@ -68,7 +71,7 @@
 </head>
 <body>
     <div class="container" id="id-container">
-        <div class="Python">
+        <div class="Python" id="id-py">
             <h1><span class="spanBlue">from</span> datetime <span class="spanBlue">import</span> datetime</h1>
             <h1>&nbsp;</h1>
             <h1><span class="spanBlue">class</span> DateTime:</h1>
@@ -83,7 +86,7 @@
             <h1>&nbsp;</h1>
             <h1>Now = DateTime()</h1>
         </div>
-        <div class="C">
+        <div class="C" id="id-c">
             <h1><span class="spanBlue">#include</span> <span class="spanOrange">&lt;stdio.h&gt;</span></h1>
             <h1><span class="spanBlue">struct</span> DateTime {</h1>
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">unsigned int</span> hh; <span class="spanBlue">unsigned int</span> mm;</h1>
@@ -99,7 +102,7 @@
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">return</span> 0;</h1>
             <h1>}</h1>
         </div>
-        <div class="CPP">
+        <div class="CPP" id="id-cpp">
             <h1><span class="spanBlue">#include</span> <span class="spanOrange">&lt;iostream&gt;</span></h1>
             <h1><span class="spanBlue">#include</span> <span class="spanOrange">&lt;string&gt;</span></h1>
             <h1><span class="spanBlue">class</span> DateTime {</h1>
@@ -117,7 +120,7 @@
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">return</span> 0;</h1>
             <h1>}</h1>
         </div>
-        <div class="CS">
+        <div class="CS" id="id-cs">
             <h1><span class="spanBlue">using</span> <span class="spanGreen">System</span>;</h1>
             <h1><span class="spanBlue">public</span> <span class="spanBlue">class</span> <span class="spanGreen">DateTime</span></h1>
             <h1>{</h1>
@@ -138,7 +141,7 @@
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;}</h1>
             <h1>}</h1>
         </div>
-        <div class="Java1">
+        <div class="Java1" id="id-java1">
             <h1><span class="spanBlue">public</span> <span class="spanBlue">class</span> DateTime</h1>
             <h1>{</h1>
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">private int</span> hh = <span class="spanBlue" id="javahh">00</span>;</h1>
@@ -160,7 +163,7 @@
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;}</h1>
             <h1>}</h1>
         </div>
-        <div class="Java2">
+        <div class="Java2" id="id-java2">
             <h1><span class="spanBlue">public</span> <span class="spanBlue">class</span> Main</h1>
             <h1>{</h1>
             <h1><span class="spanBlue">public static void</span> main(String[] args)</h1>
@@ -181,6 +184,24 @@
             <h1>&nbsp;</h1>
             <h1>&nbsp;</h1> -->
         </div>
+        <div class="JS" id="id-js">
+            <h1><span class="spanBlue">class</span> DateTime</h1>
+            <h1>{</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;constructor()</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;{</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanOrange">this</span>.hh = <span class="spanBlue" id="jshh">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanOrange">this</span>.mm = <span class="spanBlue" id="jsmm">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanOrange">this</span>.ss = <span class="spanBlue" id="jsss">00</span>;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanOrange">this</span>.DD = <span class="spanBlue" id="jsDD">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanOrange">this</span>.MM = <span class="spanGreen">"<span id="jsMM">00</span>"</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanOrange">this</span>.YY = <span class="spanBlue" id="jsYY">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;}</h1>
+            <h1>}</h1>
+            <h1>&nbsp;</h1>
+            <h1><span class="spanBlue">let</span> Now = <span class="spanBlue">new</span> DateTime();</h1>
+            <h1></h1>
+        </div>
     </div>
     <script>
         function setFontSize() {
@@ -195,8 +216,6 @@
                 element.style.flexDirection = "row";
             }
         }
-        window.addEventListener('load', setFontSize);
-        window.addEventListener('resize', setFontSize);
         function getMonthName(month) {
             const months = [
                 "January", "February", "March", "April", "May", "June",
@@ -223,23 +242,84 @@
             document.getElementById(MMId).textContent = MM;
             document.getElementById(YYId).textContent = YY;
         }
-        /*PYTHON*/
-        /* setInterval(function() {updateTime("pyhh", "pymm", "pyss", "pyDD", "pyMM", "pyYY");}, 1000);
-        updateTime("pyhh", "pymm", "pyss", "pyDD", "pyMM", "pyYY");
-
-        /*C*/
-        /* setInterval(function() {updateTime("chh", "cmm", "css", "cDD", "cMM", "cYy");}, 1000);
-        updateTime("chh", "cmm", "css", "cDD", "cMM", "cYY"); >
-
-        /*CPP*/
-        /* setInterval(function() {updateTime("cpphh", "cppmm", "cppss", "cppDD", "cppMM", "cppYy");}, 1000);
-        updateTime("cpphh", "cppmm", "cppss", "cppDD", "cppMM", "cppYY");
-
-        /*CS*/
-        /*setInterval(function() {updateTime("cshh", "csmm", "csss", "csDD", "csMM", "csYy");}, 1000);
-        updateTime("cshh", "csmm", "csss", "csDD", "csMM", "csYY");*/
-        setInterval(function() {updateTime("javahh", "javamm", "javass", "javaDD", "javaMM", "javaYy");}, 1000);
-        updateTime("javahh", "javamm", "javass", "javaDD", "javaMM", "javaYY");
+        function toggleDisplay(class1, class2) {
+            const containerDivs = document.querySelectorAll('.container > div');
+            containerDivs.forEach(div => {
+                div.style.display = 'none';
+            });
+            if (class1) {
+                const selectedDiv1 = document.getElementById(class1);
+                console.log(class1 + " found!")
+                if (selectedDiv1) {
+                    selectedDiv1.style.display = 'block';
+                } else {
+                    console.error(`No div found with class ${class1}`);
+                }
+            }
+            if (class2) {
+                const selectedDiv2 = document.getElementById(class2);
+                console.log(class2 + " found!")
+                if (selectedDiv2) {
+                    selectedDiv2.style.display = 'block';
+                } else {
+                    console.error(`No div found with class ${class2}`);
+                }
+            }
+            if (class1=="id-py") {
+                setInterval(function() {updateTime("pyhh", "pymm", "pyss", "pyDD", "pyMM", "pyYY");}, 1000);
+                updateTime("pyhh", "pymm", "pyss", "pyDD", "pyMM", "pyYY");
+            }
+            else if (class1=="id-c"){
+                setInterval(function() {updateTime("chh", "cmm", "css", "cDD", "cMM", "cYy");}, 1000);
+                updateTime("chh", "cmm", "css", "cDD", "cMM", "cYY");
+            }
+            else if (class1=="id-cpp"){
+                setInterval(function() {updateTime("cpphh", "cppmm", "cppss", "cppDD", "cppMM", "cppYy");}, 1000);
+                updateTime("cpphh", "cppmm", "cppss", "cppDD", "cppMM", "cppYY");
+            }
+            else if (class1=="id-cs"){
+                setInterval(function() {updateTime("cshh", "csmm", "csss", "csDD", "csMM", "csYy");}, 1000);
+                updateTime("cshh", "csmm", "csss", "csDD", "csMM", "csYY");
+            }
+            else if (class1=="id-java1"){
+                setInterval(function() {updateTime("javahh", "javamm", "javass", "javaDD", "javaMM", "javaYy");}, 1000);
+                updateTime("javahh", "javamm", "javass", "javaDD", "javaMM", "javaYY");
+            }
+            else if (class1=="id-js"){
+                setInterval(function() {updateTime("jshh", "jsmm", "jsss", "jsDD", "jsMM", "jsYY");}, 1000);
+                updateTime("jshh", "jsmm", "jsss", "jsDD", "jsMM", "jsYY");
+            }
+        }
+        window.addEventListener('load', setFontSize);
+        window.addEventListener('resize', setFontSize);
+        window.wallpaperPropertyListener = {
+            applyUserProperties: function(properties) {
+                if (properties.selectClockStyle) {
+                    if (properties.selectClockStyle.value) {
+                        switch (properties.selectClockStyle.value) {
+                            case 1:
+                                toggleDisplay("id-py");
+                                break;
+                            case 2:
+                                toggleDisplay("id-c");
+                                break;
+                            case 3:
+                                toggleDisplay("id-cpp");
+                                break;
+                            case 4:
+                                toggleDisplay("id-cs");
+                                break;
+                            case 5:
+                                toggleDisplay("id-java1","id-java2");
+                                break;
+                            case 6:
+                                toggleDisplay("id-js");
+                                break;
+                        }
+                    }
+                }
+            }
+        }
     </script>
 </body>
 </html>

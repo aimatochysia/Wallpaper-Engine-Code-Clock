@@ -1,0 +1,45 @@
+{
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties": {
+            "selectClockStyle": {
+                "options": [
+                    {
+                        "label": "Select From Below",
+                        "value": 0
+                    },
+                    {
+                        "label": "Python",
+                        "value": 1
+                    },
+                    {
+                        "label": "C",
+                        "value": 2
+                    },
+                    {
+                        "label": "C++",
+                        "value": 3
+                    },
+                    {
+                        "label": "C#",
+                        "value": 4
+                    },
+                    {
+                        "label": "Java",
+                        "value": 5
+                    },
+                    {
+                        "label": "JS",
+                        "value": 6
+                    }
+                ],
+                "text": "Code Language",
+                "type": "combo",
+                "value": 1
+            }
+		}
+	},
+	"title" : "Code O'Clock",
+	"type" : "web"
+}
