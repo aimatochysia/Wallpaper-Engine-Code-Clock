@@ -59,6 +59,8 @@
 	"ratingviolence" : "none",
 	"tags" : [ "Technology" ],
 	"title" : "Code O'Clock",
-	"type" : "Web",
-	"version" : 0
+	"type" : "web",
+	"version" : 1,
+	"workshopid" : "3238355078",
+	"workshopurl" : "steam://url/CommunityFilePage/3238355078"
 }
