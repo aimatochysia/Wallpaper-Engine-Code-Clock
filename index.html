@@ -139,32 +139,33 @@
             <h1>}</h1>
         </div>
         <div class="Java1">
-            <h1>public class DateTime</h1>
+            <h1><span class="spanBlue">public</span> <span class="spanBlue">class</span> DateTime</h1>
             <h1>{</h1>
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;private int hh = 00;</h1>
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;private int mm = 00;</h1>
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;private int ss = 00;</h1>
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;private int DD = 00;</h1>
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;private String MM = "00";</h1>
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;private int YY = 00;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">private int</span> hh = <span class="spanBlue" id="javahh">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">private int</span> mm = <span class="spanBlue" id="javamm">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">private int</span> ss = <span class="spanBlue" id="javass">00</span>;</h1>
             <h1>&nbsp;</h1>
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;public DateTime(){}</h1>
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;public DateTime(int hh,int mm,</h1>
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int ss, int DD,</h1>
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String MM, int YY)</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">private int</span> DD = <span class="spanBlue" id="javaDD">00</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">private</span> String MM = <span class="spanGreen">"<span id="javaMM">00</span>"</span>;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">private int</span> YY = <span class="spanBlue" id="javaYY">00</span>;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> DateTime(){}</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> DateTime(<span class="spanBlue">int</span> hh,<span class="spanBlue">int</span> mm,</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">int</span> ss, <span class="spanBlue">int</span> DD,</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String MM, <span class="spanBlue">int</span> YY)</h1>
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;{</h1>
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.hh = hh;this.mm = mm;</h1>
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.ss = ss;this.DD = DD;</h1>
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.MM = MM;this.YY = YY;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">this</span>.hh = hh;<span class="spanBlue">this</span>.mm = mm;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">this</span>.ss = ss;<span class="spanBlue">this</span>.DD = DD;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">this</span>.MM = MM;<span class="spanBlue">this</span>.YY = YY;</h1>
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;}</h1>
             <h1>}</h1>
         </div>
         <div class="Java2">
-            <h1>public class Main</h1>
+            <h1><span class="spanBlue">public</span> <span class="spanBlue">class</span> Main</h1>
             <h1>{</h1>
-            <h1>public static void main(String[] args)</h1>
+            <h1><span class="spanBlue">public static void</span> main(String[] args)</h1>
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;{</h1>
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;DateTime Now = new DateTime();</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;DateTime Now = <span class="spanBlue">new</span> DateTime();</h1>
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;}</h1>
             <h1>}</h1>
             <!-- <h1>&nbsp;</h1>
@@ -235,8 +236,10 @@
         updateTime("cpphh", "cppmm", "cppss", "cppDD", "cppMM", "cppYY");
 
         /*CS*/
-        setInterval(function() {updateTime("cshh", "csmm", "csss", "csDD", "csMM", "csYy");}, 1000);
-        updateTime("cshh", "csmm", "csss", "csDD", "csMM", "csYY");
+        /*setInterval(function() {updateTime("cshh", "csmm", "csss", "csDD", "csMM", "csYy");}, 1000);
+        updateTime("cshh", "csmm", "csss", "csDD", "csMM", "csYY");*/
+        setInterval(function() {updateTime("javahh", "javamm", "javass", "javaDD", "javaMM", "javaYy");}, 1000);
+        updateTime("javahh", "javamm", "javass", "javaDD", "javaMM", "javaYY");
     </script>
 </body>
 </html>
