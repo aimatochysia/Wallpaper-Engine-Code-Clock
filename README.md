@@ -1,14 +1,14 @@
 <h1>Wallpaper Engine Programming Language Stylized Clock Wallpaper</h1>
-<p>Programming languages struct / class styled clock. Currently displaying these languages:
-- Python
-- C
-- C++
-- C#
-- Java
-- Javascript
-
-future update may contain:
--color picker
+<p>Programming languages struct / class styled clock. Currently displaying these languages:<br>
+- Python<br>
+- C<br>
+- C++<br>
+- C#<br>
+- Java<br>
+- Javascript<br>
+<br>
+future update may contain:<br>
+-color picker<br>
 -audio visualizer</p></br>
 <p>How to use:</p>
 <p>1.Install Wallpaper Engine</p>
