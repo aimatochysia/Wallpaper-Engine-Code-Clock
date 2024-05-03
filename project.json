@@ -1,45 +1,64 @@
 {
+	"contentrating" : "Everyone",
+	"description" : "Early version for programming languages struct / class styled clock. Currently displaying these languages:\n- Python\n- C\n- C++\n- C#\n- Java\n- Javascript\n\nfuture update may contain:\n-color picker\n-audio visualizer",
 	"file" : "index.html",
 	"general" : 
 	{
-		"properties": {
-            "selectClockStyle": {
-                "options": [
-                    {
-                        "label": "Select From Below",
-                        "value": 0
-                    },
-                    {
-                        "label": "Python",
-                        "value": 1
-                    },
-                    {
-                        "label": "C",
-                        "value": 2
-                    },
-                    {
-                        "label": "C++",
-                        "value": 3
-                    },
-                    {
-                        "label": "C#",
-                        "value": 4
-                    },
-                    {
-                        "label": "Java",
-                        "value": 5
-                    },
-                    {
-                        "label": "JS",
-                        "value": 6
-                    }
-                ],
-                "text": "Code Language",
-                "type": "combo",
-                "value": 1
-            }
+		"properties" : 
+		{
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
+			},
+			"selectClockStyle" : 
+			{
+				"index" : 0,
+				"options" : 
+				[
+					{
+						"label" : "Select From Below",
+						"value" : 0
+					},
+					{
+						"label" : "Python",
+						"value" : 1
+					},
+					{
+						"label" : "C",
+						"value" : 2
+					},
+					{
+						"label" : "C++",
+						"value" : 3
+					},
+					{
+						"label" : "C#",
+						"value" : 4
+					},
+					{
+						"label" : "Java",
+						"value" : 5
+					},
+					{
+						"label" : "JS",
+						"value" : 6
+					}
+				],
+				"order" : 100,
+				"text" : "Code Language",
+				"type" : "combo",
+				"value" : 1
+			}
 		}
 	},
+	"preview" : "preview.gif",
+	"ratingsex" : "none",
+	"ratingviolence" : "none",
+	"tags" : [ "Technology" ],
 	"title" : "Code O'Clock",
-	"type" : "web"
+	"type" : "Web",
+	"version" : 0
 }
