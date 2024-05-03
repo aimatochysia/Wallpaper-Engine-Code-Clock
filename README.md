@@ -1,4 +1,4 @@
-<h1>Wallpaper Engine Programming Language Stylized Wallpaper</h1>
+<h1>Wallpaper Engine Programming Language Stylized Clock Wallpaper</h1>
 <p>Programming languages struct / class styled clock. Currently displaying these languages:
 - Python
 - C
