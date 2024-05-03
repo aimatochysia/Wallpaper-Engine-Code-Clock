@@ -11,9 +11,7 @@
             padding: 0;
             margin: 0;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hiDDen;
+            overflow: hidden;
             background-color: #0f0f0f;
             font-family: "Courier New", Courier, monospace;
         }
@@ -23,18 +21,20 @@
         }
 
         .container {
-            border: 2px solid blue;
-            display: flex;
+            position:relative;
+            display:flex;
+            flex-direction: row;
             justify-content: center;
-            align-items: center;
+            align-items:center;
             height: 100%;
             width: 100vw;
             font-size: 1vw;
             white-space: nowrap;
             color: rgb(221, 238, 255);
-            justify-content: center;
-            align-items: center;
             text-align: left;
+        }
+        .container > * {
+            margin: 0 2.5%;
         }
 
         /*Code Language*/
@@ -48,6 +48,9 @@
             display: none;
         }
         .CS{
+            display: none;
+        }
+        .Java1,.Java2{
             display: flexbox;
         }
 
@@ -93,8 +96,8 @@
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.hh = <span id="chh" class="spanBlue">00</span>, .mm = <span id="cmm" class="spanBlue">00</span>, .ss = <span id="css" class="spanBlue">00</span>,</h1>
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.DD = <span id="cDD" class="spanBlue">00</span>, .MM = <span class="spanGreen">"<span id="cMM">00</span>"</span>, .YY = <span id="cYY" class="spanBlue">00</span></h1>
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;}</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">return</span> 0;</h1>
             <h1>}</h1>
-            <h1><span class="spanBlue">return</span> 0;</h1>
         </div>
         <div class="CPP">
             <h1><span class="spanBlue">#include</span> <span class="spanOrange">&lt;iostream&gt;</span></h1>
@@ -111,11 +114,11 @@
             <h1><span class="spanBlue">int</span> main() {</h1>
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;DateTime Now(<span id="cpphh" class="spanBlue">00</span>,<span id="cppmm" class="spanBlue">00</span>,<span id="cppss" class="spanBlue">00</span>,</h1>
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="cppDD" class="spanBlue">00</span>,<span class="spanGreen">"<span id="cppMM">00</span>"</span>,<span id="cppYY" class="spanBlue">00</span>);</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">return</span> 0;</h1>
             <h1>}</h1>
-            <h1><span class="spanBlue">return</span> 0;</h1>
         </div>
         <div class="CS">
-            <h1><span class="spanBlue">using</span> <span class="spanGreen">System</span></h1>
+            <h1><span class="spanBlue">using</span> <span class="spanGreen">System</span>;</h1>
             <h1><span class="spanBlue">public</span> <span class="spanBlue">class</span> <span class="spanGreen">DateTime</span></h1>
             <h1>{</h1>
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;<span class="spanBlue">public</span> <span class="spanBlue">int</span> hh {<span class="spanBlue">get</span>; <span class="spanBlue">set</span>;} = <span id="cshh">00</span>;</h1>
@@ -135,21 +138,47 @@
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;}</h1>
             <h1>}</h1>
         </div>
-        <div class="Java">
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
-            <h1></h1>
+        <div class="Java1">
+            <h1>public class DateTime</h1>
+            <h1>{</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;private int hh = 00;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;private int mm = 00;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;private int ss = 00;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;private int DD = 00;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;private String MM = "00";</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;private int YY = 00;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;public DateTime(){}</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;public DateTime(int hh,int mm,</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int ss, int DD,</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String MM, int YY)</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;{</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.hh = hh;this.mm = mm;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.ss = ss;this.DD = DD;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.MM = MM;this.YY = YY;</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;}</h1>
+            <h1>}</h1>
+        </div>
+        <div class="Java2">
+            <h1>public class Main</h1>
+            <h1>{</h1>
+            <h1>public static void main(String[] args)</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;{</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;DateTime Now = new DateTime();</h1>
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;}</h1>
+            <h1>}</h1>
+            <!-- <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1>
+            <h1>&nbsp;</h1> -->
         </div>
     </div>
     <script>
@@ -157,12 +186,12 @@
             var element = document.getElementById('id-container');
             var screenHeight = window.innerHeight;
             var screenWidth = window.innerWidth;
-            var fontSize;
-        
             if (screenHeight >= screenWidth) {
-                element.style.fontSize = "1.5vw";
+                element.style.fontSize = "1.2vw";
+                element.style.flexDirection = "column";
             } else {
-                element.style.fontSize = "1.5vh";
+                element.style.fontSize = "1.2vh";
+                element.style.flexDirection = "row";
             }
         }
         window.addEventListener('load', setFontSize);
