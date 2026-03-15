@@ -1,4 +1,8 @@
 <h1>Wallpaper Engine Programming Language Stylized Clock Wallpaper</h1>
+
+<h1>Steam Workshop Link:</h1>
+<h3><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3238355078">Click Here!</a></h3>
+
 <p>Programming languages struct / class styled clock. Currently displaying these languages:<br>
 - Python<br>
 - C<br>
@@ -15,11 +19,6 @@ future update may contain:<br>
 <p>2.Click link below</p>
 <p>3.+ Subscribe and set as wallpaper</p>
 <p></p>
-<h1>Steam Workshop Link:</h1>
-<h3><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3238355078">Click Here!</a></h3>
-
-<h2 align="center">Hi 👋, I'm Petra Michael</h2>
-<h3 align="center">A passionate Software Developer and Researcher from Indonesia</h3>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
